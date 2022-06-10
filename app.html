@@ -1,0 +1,26 @@
+<template>
+	<div class="slds-m-around_medium">
+		<lightning-card title="camera" icon-name="action:preview">
+			<lightning-button variant="brand" onclick={handleClick} label="Use Camera/Close" class="slds-align_absolute-center"></lightning-button>
+            <template if:true={showText}>				
+			<div class="slds-m-around_medium">
+				<lightning-button label="Back Camera1" title="Non-primary action" onclick={backCamera} class="slds-m-left_x-small"></lightning-button>
+				<lightning-button label="Front Camera1" title="Non-primary action" onclick={frontCamera} class="slds-m-left_x-small"></lightning-button>
+				<lightning-button  variant="success" label="Click Photo" title="Successful action" onclick={clickPhoto} class="slds-m-left_x-small"></lightning-button>
+				<lightning-button variant="brand" label="Save Photo" title="Non-primary action" onclick={saveImage} class="slds-m-left_x-small"></lightning-button>
+				<!--lightning-button label="Close Camera" title="Non-primary action" onclick={closeCamera} class="slds-m-left_x-small"></lightning-button-->
+			</div>
+			<div class="slds-m-around_medium">	
+				<video  width="400" height="300" style="border: 1px solid green;" autoplay></video>				
+			</div>
+			<!--div class="slds-hidden"></div-->
+			<div class="slds-m-around_medium">
+				<canvas width="400" height="300" style="border:1px solid blue;"></canvas>
+			</div>
+			<!--div class="slds-m-around_medium">
+				<c-app-child lst-markers={lstMarkers} zoomlevel={zoomlevel}></c-app-child>
+			</div-->
+		</template>
+	</lightning-card>
+	</div>
+</template>
